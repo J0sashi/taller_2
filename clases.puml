@@ -1,0 +1,47 @@
+@startuml
+left to right direction
+class Libros{
+ -titulo : String
+ -autor : String
+ -categoria : String
+ -ISBN : Int
+ +Libros() : String
+ +Libros(titulo : String,autor : String, categoria : String, ISBN : String)
+ +getTitulo() : String
+ +getAutor() : String
+ +getCategoria() : String
+ +getISBN() : Int
+}
+class Biblioteca{
+ -libro : String
+ -socio : String    
+ -calificacion de libro : double
+ +Biblioteca()
+ +Biblioteca(libro : String, Calificacion de libro : String)
+ +getLibro() : String
+ +getSocio() : String
+ +setSocio(socio : String) : void
+ +getCalificacion de libro() : String
+ +setCalificaion de libro(calificacion de libro: Double) : void
+}
+class Socio{
+ -email : String
+ -contraseña : String
+ -n° de socio : String
+ -lista de libros prestados : String
+ +Socio()
+ +Socio(n° de socio : String, lista de libros prestados : String)
+ +getN° de socio() : Int
+ +getLista de libros prestados() : String
+ +getContraseña() : String
+ +setContraseña(contraseña : String) : void
+ +getEmail() : String
+ +setEmail(email : String): void
+ 
+
+}
+Biblioteca "1" *-- "*" Libros :tiene >
+Biblioteca "1" o-- "*" Socio
+
+
+@enduml

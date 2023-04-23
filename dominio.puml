@@ -1,0 +1,27 @@
+@startuml
+left to right direction
+entity Libros{
+ titulo
+ autor
+ categoria
+ ISBN
+
+}
+entity Socio{
+ correo electronico
+ contraseña
+ n° de Socio
+ lista de libros prestados
+
+}
+entity Biblioteca{
+ libro 
+ socio
+ calificacion de libro 
+
+}
+Socio "o..*" -- "1..*" Libros : solicita >
+(Socio, Libros) .. Biblioteca
+
+
+@enduml
